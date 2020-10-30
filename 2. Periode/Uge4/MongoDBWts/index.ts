@@ -1,12 +1,9 @@
 import * as mongo from "mongodb";
+const path = require("path")
+require('dotenv').config({ path: path.join(process.cwd(), '.env') })
 const MongoClient = mongo.MongoClient;
-const uri = "mongodb+srv://fullstack_user:K1ngGu1er0d@fullstack-cluster.kaemr.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const uri:any = process.env.CONNECTION;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-//Kopi fra første opgave, virker ikke helt, i form at den ikke kan forslå metoder på res. etc.
-//const MongoClient = require('mongodb').MongoClient;
-//const uri = "mongodb+srv://fullstack_user:K1ngGu1er0d@fullstack-cluster.kaemr.mongodb.net/<dbname>?retryWrites=true&w=majority";
-//const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 /* IMPORTANT ---> 
    Before you start, do a tcs --init in the root of the project to create tsconfig.json
