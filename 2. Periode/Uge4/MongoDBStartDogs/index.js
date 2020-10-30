@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://fullstack_user:K1ngGu1er0d@fullstack-cluster.kaemr.mongodb.net/<dbname>?retryWrites=true&w=majority";
+
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 /*
 client.connect(err => {
