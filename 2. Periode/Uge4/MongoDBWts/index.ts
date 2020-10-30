@@ -1,11 +1,11 @@
 import * as mongo from "mongodb";
 const MongoClient = mongo.MongoClient;
-const uri = "mongodb+srv://fullstack_user:K1ngGu1er0d@fullstack-cluster.kaemr.mongodb.net/<dbname>?retryWrites=true&w=majority";
+
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //Kopi fra første opgave, virker ikke helt, i form at den ikke kan forslå metoder på res. etc.
 //const MongoClient = require('mongodb').MongoClient;
-//const uri = "mongodb+srv://fullstack_user:K1ngGu1er0d@fullstack-cluster.kaemr.mongodb.net/<dbname>?retryWrites=true&w=majority";
+
 //const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 /* IMPORTANT ---> 
