@@ -4,7 +4,7 @@ import {ApiError} from '../errors/apiError'
 
 export const endpointError = function (req: any, res: Response, next: NextFunction) {
     if(req.originalUrl.startsWith("/api")){
-        res.status(404).json({ code: 404, msg: "this API does not contanin this endpoint" })
+        res.status(404).json({ code: 404, msg: "this API does not contain this endpoint" })
     }
     next()
 }

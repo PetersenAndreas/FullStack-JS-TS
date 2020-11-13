@@ -3,7 +3,7 @@ import { debug } from "console";
 import express from "express";
 import path from "path";
 //import { UserFacade } from './facades/userFacades';
-import UserFacade from './facades/userFacades';
+//import UserFacade from './facades/userFacades';
 //import userApiDB from './routes/userApiDB';
 //import loggerSimple from './middleware/simpleLogger'
 //import myCors from './middleware/my-cors'
@@ -25,9 +25,10 @@ app.get("/api/dummy", async (req, res) => {
   res.json({ msg: "Hello" })
 })
 
-let userAPIRouter = require('./routes/userApiDB');
-
-app.use("/api/users",userAPIRouter);
+let userAPIRouter = require('./routes/gameAPI');
+app.use("/api/gameapi",userAPIRouter);
+//let userAPIRouter2 = require('./routes/userApiDB');
+//app.use("/api/users",userAPIRouter);
 
 app.use(endpointError)
 app.use(errorFormat)
