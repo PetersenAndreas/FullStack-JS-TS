@@ -8,6 +8,21 @@ const gameArea = require('./gameData.js').gameArea.geometry;
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
 
+/*
+ Create a new polygon meant to be used on clients by React Native's MapView which
+ requres an object as the one we create below 
+ NOTE --> how we swap longitude, latitude values
+*/
+polygonForClient = {};
+polygonForClient.coordinates = gameArea.coordinates[0].map(point => {
+  return {latitude: point[1],longitude: point[0]}
+})
+
+//Returns a polygon, representing the gameArea
+app.get("/geoapi/gamearea",(req,res)=>{
+    res.json(polygonForClient);
+  });
+
 app.get('/geoapi/isuserinarea/:lon/:lat', (req, res) => {
     const {lon, lat} = req.params
     const point = {"type":"Point","coordinates":[lon,lat]}
