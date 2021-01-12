@@ -14,7 +14,7 @@ let userCollection: mongo.Collection;
 export default class UserFacade {
 
   static async initDB(client: mongo.MongoClient) {
-
+    
     const dbName = process.env.DB_NAME;
     //debug(`Database ${dbName} about to be setup: ${client}`)
     if (!dbName) {

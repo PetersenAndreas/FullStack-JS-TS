@@ -26,9 +26,12 @@ app.get("/api/dummy", async (req, res) => {
 })
 
 let userAPIRouter = require('./routes/gameAPI');
+//let userAPIRouter2 = require('./routes/userAPI');
 app.use("/api/gameapi",userAPIRouter);
-//let userAPIRouter2 = require('./routes/userApiDB');
-//app.use("/api/users",userAPIRouter);
+let userAPIRouter2 = require('./routes/userApiDB');
+app.use("/api/users",userAPIRouter2);
+const graphQLRouter = require('./routes/graphQLAPI');
+app.use("/graphql", graphQLRouter)
 
 app.use(endpointError)
 app.use(errorFormat)
@@ -40,6 +43,8 @@ const PORT = process.env.PORT || 3333;
 const server = app.listen(PORT)
 debug(`Server started, listening on port: ${PORT}`)
 module.exports.server = server;
+
+export default app
 
 /*
 Selv skrevet kode:

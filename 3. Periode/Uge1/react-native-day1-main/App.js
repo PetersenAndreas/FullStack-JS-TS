@@ -15,6 +15,7 @@ import FlatListScreen from "./examples/flatList"
 import SectionlistScreen from "./examples/SectionList"
 import TouchableHighlightScreen from "./examples/touchableHighlight"
 import TouchableOpacityScreen from "./examples/touchableOpacity"
+import TouchableNativeFeedbackScreen from "./examples/touchableNativeFeedback"
 
 function HomeScreen({ navigation }) {
   return (
@@ -52,6 +53,12 @@ function HomeScreen({ navigation }) {
           <Button
             title="TouchableHighlight Demo"
             onPress={() => navigation.navigate('TouchableHighlightDemo')}
+          />
+        </View>
+        <View style={{ margin: 1 }}>
+          <Button
+            title="TouchableNativeFeedback Demo"
+            onPress={() => navigation.navigate('TouchableNativeFeedbackDemo')}
           />
         </View>
         <View style={{ margin: 1 }}>
@@ -124,6 +131,7 @@ function App() {
         <Stack.Screen name="TextInputDemo" component={TextInputScreen} />
         <Stack.Screen name="TouchableHighlightDemo" component={TouchableHighlightScreen} />
         <Stack.Screen name="TouchableOpacityDemo" component={TouchableOpacityScreen} />
+        <Stack.Screen name="TouchableNativeFeedbackDemo" component={TouchableNativeFeedbackScreen} />
         <Stack.Screen name="FlexDirectionDemo" component={FlexDirectionScreen} />
         <Stack.Screen name="justifyContentDemo" component={justifyContentScreen} />
         <Stack.Screen name="AlignItemsDemo" component={alignItemsScreen} />

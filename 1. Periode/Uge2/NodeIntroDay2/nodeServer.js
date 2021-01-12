@@ -2,6 +2,8 @@ const http = require('http');
 const DosDetector = require('./dosDetector');
 const dosDetector = new DosDetector(2000);
 const info = require('./SimpleOsFile');
+
+//Brug Firefox til fremvisningen
 const server = http.createServer((req, res) => {
   if (req.url === '/api/os-info') {
     res.setHeader('Content-Type', 'application/json');

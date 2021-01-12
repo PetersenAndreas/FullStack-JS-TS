@@ -48,6 +48,8 @@ export default class GameFacade {
     //2) Create 2dsphere index on location
     await positionCollection.createIndex({ "lastUpdated": 1 }, { expireAfterSeconds: EXPIRES_AFTER })
     await positionCollection.createIndex({ location: "2dsphere" })
+    //Index - "lastUpdated": 1
+    //1 betyder at index er generes i stigende orden, -1 betyder at det generes i faldende orden
 
 
 

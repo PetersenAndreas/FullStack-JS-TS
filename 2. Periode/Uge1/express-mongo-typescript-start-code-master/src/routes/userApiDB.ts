@@ -9,7 +9,7 @@ import * as mongo from "mongodb"
 import { getConnectedClient } from "../config/setupDB";
 const MongoClient = mongo.MongoClient;
 
-const USE_AUTHENTICATION = !process.env["SKIP_AUTHENTICATION"];
+const USE_AUTHENTICATION = !process.env["SKIP_AUTHENTICATION"];//fjern "!" for at fjerne auth
 
 let dbInitialized = false;
 

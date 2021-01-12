@@ -22,6 +22,17 @@ let filteredListWithOrginalFilter = names.filter(function(a){
     } 
  });
 
+ console.log("All names:");
+ console.log(names);
+ console.log();
+ console.log("2a");
+ console.log("Own filter function:");
+ console.log(myFilter(names, filterNameLength));
+ console.log();
+ console.log("Original filter function:");
+ console.log(filteredListWithOrginalFilter);
+ console.log();
+
 /*--------------------execise 2b-------------------------*/
 
 function myMap(array, callback) {
@@ -44,16 +55,6 @@ let reversedNames = names.map(function(element) {
 
 });
  
-console.log("All names:");
-console.log(names);
-console.log();
-console.log("2a");
-console.log("Own filter function:");
-console.log(myFilter(names, filterNameLength));
-console.log();
-console.log("Original filter function:");
-console.log(filteredListWithOrginalFilter);
-console.log();
 console.log("2b");
 console.log("Own map function:");
 console.log(myMap(names, nameBackwards));

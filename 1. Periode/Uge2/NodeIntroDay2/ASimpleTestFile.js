@@ -2,11 +2,11 @@ const DosDetector = require('./dosDetector');
 const info = require('./SimpleOsFile');
 const dosDetector = new DosDetector(2000);
 
-console.log(info);
+//console.log(info);
 
 
 dosDetector.on('Message', (arg) => {
-    console.log("Fucking hell, not again:", arg);
+    console.log("You've been DoS'ed", arg);
 });
 
 dosDetector.addUrl('google.dk');
